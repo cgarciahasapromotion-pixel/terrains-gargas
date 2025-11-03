@@ -1,181 +1,72 @@
-
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
-        <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-        <!--
-      Notice the use of  in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terrains constructibles à Gargas (31620) – Bêta</title>
+  <meta name="description" content="Deux terrains constructibles à Gargas (31620), 856 m² et 911 m². Bêta-test de la landing avant publication.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="data:,">
+  <style>
+    :root { --bg:#0b1220; --fg:#0f172a; --text:#0b1220; --muted:#667085; --brand:#0ea5a4; }
+    *{box-sizing:border-box} html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#fff;color:#0b1220}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 16px}
+    .hero{position:relative;isolation:isolate}
+    .hero-img{position:absolute;inset:0;background:
+      linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat;
+      z-index:-1}
+    .hero-content{padding:96px 0 72px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.2);backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px;font-size:14px}
+    h1{font-size:clamp(30px,6vw,56px);margin:14px 0 12px}
+    .sub{font-size:clamp(16px,3.2vw,22px);opacity:.95;margin:0 0 16px}
+    .pills{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:#e6fffb;border:1px solid #bff6ee;color:#0b6b67;padding:6px 10px;border-radius:10px;font-weight:600}
+    .cta{display:inline-block;margin-top:20px;background:#10b3ae;color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700;box-shadow:0 8px 30px rgba(16,179,174,.35)}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;box-shadow:0 8px 26px rgba(2,6,23,.06);overflow:hidden}
+    .section-title{font-size:clamp(22px,4vw,30px);margin:0 0 8px}
+    .muted{color:#667085;margin:0 0 18px}
+    iframe{width:100%; height:980px; border:0}
+    .foot{font-size:13px;color:#667085;margin:20px 0 60px}
+    @media (max-width:600px){ iframe{height:1150px} }
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-img" aria-hidden="true"></div>
+    <div class="wrap hero-content">
+      <span class="badge">📍 Gargas 31620 • Proximité école & multisport</span>
+      <h1>Deux Terrains Constructibles</h1>
+      <p class="sub">Au cœur de Gargas, à proximité de Toulouse — <strong>856 m²</strong> et <strong>911 m²</strong>, contigus. Idéal projet familial.</p>
+      <div class="pills">
+        <span class="pill">⚡ Accès rapide D888 / A68</span>
+        <span class="pill">🌳 Environnement calme</span>
+        <span class="pill">🧭 Exposition favorable</span>
+      </div>
+      <a href="#contact" class="cta">Je souhaite être contacté</a>
+    </div>
+  </header>
 
-      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-        <title>Emergent | Fullstack App</title>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-        <!--
-        These two scripts have been added for the testing, please do not edit or remove them
-        -->
-        <script src="https://unpkg.com/rrweb@latest/dist/rrweb.min.js"></script>
-        <script src="https://d2adkz2s9zrlge.cloudfront.net/rrweb-recorder-20250919-1.js"></script>
-        <!--
-        These two scripts have been added for the Visual Edits, please do not edit or remove them
-        -->
-        <script>
-            // Only load visual edit scripts when inside an iframe and visual edits are enabled
-            if (window.self !== window.top && 'false' === 'true') {
-                // Load debug monitor script
-                var debugScript = document.createElement('script');
-                debugScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
-                document.head.appendChild(debugScript);
+  <main class="wrap" id="contact" style="scroll-margin-top:84px;">
+    <h2 class="section-title">Contact (Bêta)</h2>
+    <p class="muted">Formulaire relié directement à Google Sheets pour validation des flux. La version finale activera le traitement RGPD et l’envoi vers votre CRM.</p>
 
-                // Configure Tailwind
-                window.tailwind = window.tailwind || {};
-                tailwind.config = {
-                    corePlugins: { preflight: false },
-                };
+    <div class="card">
+      <!-- 👇 Intégration de ton Google Form -->
+      <iframe
+        src="https://forms.gle/8sxBBtBFzBm27PF58"
+        title="Formulaire d'intérêt – Terrains Gargas (Bêta)">
+        Chargement…
+      </iframe>
+    </div>
 
-                // Load Tailwind CDN
-                var tailwindScript = document.createElement('script');
-                tailwindScript.src = 'https://cdn.tailwindcss.com';
-                document.head.appendChild(tailwindScript);
-            }
-        </script>
-    <script defer src="/static/js/bundle.js"></script></head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <p class="foot">
+      Si le formulaire ne s’affiche pas, <a href="https://forms.gle/8sxBBtBFzBm27PF58" target="_blank" rel="noopener">ouvrez-le dans un nouvel onglet</a>.
+    </p>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-        <a
-            id="emergent-badge"
-            target="_blank"
-            href="https://app.emergent.sh/?utm_source=emergent-badge"
-            style="
-                display: flex !important;
-                align-items: center !important;
-                position: fixed !important;
-                bottom: 20px;
-                right: 20px;
-                text-decoration: none;
-                padding: 6px 10px;
-                font-family: -apple-system, BlinkMacSystemFont,
-                    &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell,
-                    &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
-                    sans-serif !important;
-                font-size: 12px !important;
-                z-index: 9999 !important;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
-                border-radius: 8px !important;
-                background-color: #ffffff !important;
-                border: 1px solid rgba(255, 255, 255, 0.25) !important;
-            "
-        >
-            <div
-                style="display: flex; flex-direction: row; align-items: center"
-            >
-                <img
-                    style="width: 20px; height: 20px; margin-right: 8px"
-                    src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4"
-                />
-                <p
-                    style="
-                        color: #000000;
-                        font-family: -apple-system, BlinkMacSystemFont,
-                            &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu,
-                            Cantarell, &quot;Open Sans&quot;,
-                            &quot;Helvetica Neue&quot;, sans-serif !important;
-                        font-size: 12px !important;
-                        align-items: center;
-                        margin-bottom: 0;
-                    "
-                >
-                    Made with Emergent
-                </p>
-            </div>
-        </a>
-        <script>
-            !(function (t, e) {
-                var o, n, p, r;
-                e.__SV ||
-                    ((window.posthog = e),
-                    (e._i = []),
-                    (e.init = function (i, s, a) {
-                        function g(t, e) {
-                            var o = e.split(".");
-                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
-                                (t[e] = function () {
-                                    t.push(
-                                        [e].concat(
-                                            Array.prototype.slice.call(
-                                                arguments,
-                                                0,
-                                            ),
-                                        ),
-                                    );
-                                });
-                        }
-                        ((p = t.createElement("script")).type =
-                            "text/javascript"),
-                            (p.crossOrigin = "anonymous"),
-                            (p.async = !0),
-                            (p.src =
-                                s.api_host.replace(
-                                    ".i.posthog.com",
-                                    "-assets.i.posthog.com",
-                                ) + "/static/array.js"),
-                            (r =
-                                t.getElementsByTagName(
-                                    "script",
-                                )[0]).parentNode.insertBefore(p, r);
-                        var u = e;
-                        for (
-                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
-                                u.people = u.people || [],
-                                u.toString = function (t) {
-                                    var e = "posthog";
-                                    return (
-                                        "posthog" !== a && (e += "." + a),
-                                        t || (e += " (stub)"),
-                                        e
-                                    );
-                                },
-                                u.people.toString = function () {
-                                    return u.toString(1) + ".people (stub)";
-                                },
-                                o =
-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
-                                        " ",
-                                    ),
-                                n = 0;
-                            n < o.length;
-                            n++
-                        )
-                            g(u, o[n]);
-                        e._i.push([i, s, a]);
-                    }),
-                    (e.__SV = 1));
-            })(document, window.posthog || []);
-            posthog.init("phc_yJW1VjHGGwmCbbrtczfqqNxgBDbhlhOWcdzcIJEOTFE", {
-                api_host: "https://us.i.posthog.com",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
-            });
-        </script>
-    </body>
+    <hr style="border:none;border-top:1px solid rgba(0,0,0,.06);margin:28px 0 14px">
+    <p class="foot">Version bêta — non indexée. © HASA Promotion</p>
+  </main>
+</body>
 </html>

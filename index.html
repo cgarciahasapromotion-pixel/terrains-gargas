@@ -3,70 +3,149 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terrains constructibles à Gargas (31620) – Bêta</title>
-  <meta name="description" content="Deux terrains constructibles à Gargas (31620), 856 m² et 911 m². Bêta-test de la landing avant publication.">
+  <title>Terrains Gargas 31620 – Lots B & C</title>
+  <meta name="description" content="Deux terrains constructibles à Gargas (31620) : Lot B 911 m² (115 k€) et Lot C 856 m² (110 k€). Offre d'achat groupé -10% sur les deux.">
   <meta name="robots" content="noindex,nofollow">
   <link rel="icon" href="data:,">
   <style>
-    :root { --bg:#0b1220; --fg:#0f172a; --text:#0b1220; --muted:#667085; --brand:#0ea5a4; }
-    *{box-sizing:border-box} html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#fff;color:#0b1220}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px 16px}
-    .hero{position:relative;isolation:isolate}
-    .hero-img{position:absolute;inset:0;background:
-      linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.55)),
-      url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat;
-      z-index:-1}
-    .hero-content{padding:96px 0 72px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.35)}
-    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.2);backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px;font-size:14px}
-    h1{font-size:clamp(30px,6vw,56px);margin:14px 0 12px}
-    .sub{font-size:clamp(16px,3.2vw,22px);opacity:.95;margin:0 0 16px}
+    :root{
+      --brand:#10b3ae; --brand-2:#0ea5a4; --ink:#0b1220; --muted:#667085; --bg:#ffffff;
+      --card:#ffffff; --bd:rgba(2,6,23,.08); --shadow:0 10px 30px rgba(2,6,23,.08);
+      --ok:#12b886; --warn:#f59f00;
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1150px;margin:0 auto;padding:28px 16px}
+    /* HERO */
+    .hero{position:relative;isolation:isolate;min-height:58vh;color:#fff}
+    .hero::before{
+      content:"";position:absolute;inset:0;z-index:-2;
+      background:linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.6)),
+        url('HERO_IMAGE_URL') center/cover no-repeat;
+      /* Mets ici l’URL de ta photo aérienne si tu veux */
+      /* Exemple libre: https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2400&auto=format&fit=crop */
+    }
+    .hero .wrap{padding:96px 16px}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px;font-weight:600}
+    h1{font-size:clamp(28px,6vw,56px);margin:14px 0 10px}
+    .sub{font-size:clamp(16px,3.2vw,22px);opacity:.95;margin:0 0 16px;text-wrap:balance}
     .pills{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}
     .pill{display:inline-flex;gap:8px;align-items:center;background:#e6fffb;border:1px solid #bff6ee;color:#0b6b67;padding:6px 10px;border-radius:10px;font-weight:600}
-    .cta{display:inline-block;margin-top:20px;background:#10b3ae;color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700;box-shadow:0 8px 30px rgba(16,179,174,.35)}
-    .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;box-shadow:0 8px 26px rgba(2,6,23,.06);overflow:hidden}
+    .cta{display:inline-block;margin-top:20px;background:var(--brand);color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700;box-shadow:0 10px 32px rgba(16,179,174,.35)}
+    /* CARDS */
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 6;background:var(--card);border:1px solid var(--bd);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+    @media (max-width:900px){ .card{grid-column:span 12} }
+    .card-img{aspect-ratio: 16/9; background:#f2f4f7 url('https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+    .card-body{padding:16px}
+    .card h3{margin:0 0 4px;font-size:22px}
+    .meta{color:var(--muted);margin:0 0 10px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+    .chip{border:1px solid var(--bd);padding:6px 10px;border-radius:999px;font-weight:600}
+    .price{font-size:22px;font-weight:800;margin:6px 0 0}
+    .btnline{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--bd);background:#fff;font-weight:700}
+    .btn.primary{background:var(--brand);color:#fff;border-color:transparent}
+    /* STRIP */
+    .strip{background:#f8fffe;border:1px dashed #b7f2ea;border-radius:14px;padding:14px 16px;margin:18px 0;display:flex;gap:10px;align-items:flex-start}
+    /* CONTACT */
     .section-title{font-size:clamp(22px,4vw,30px);margin:0 0 8px}
-    .muted{color:#667085;margin:0 0 18px}
-    iframe{width:100%; height:980px; border:0}
-    .foot{font-size:13px;color:#667085;margin:20px 0 60px}
+    .muted{color:var(--muted);margin:0 0 16px}
+    iframe{width:100%;height:980px;border:0}
     @media (max-width:600px){ iframe{height:1150px} }
+    footer{color:var(--muted);font-size:13px;margin:28px 0 48px}
   </style>
 </head>
 <body>
+
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-img" aria-hidden="true"></div>
-    <div class="wrap hero-content">
-      <span class="badge">📍 Gargas 31620 • Proximité école & multisport</span>
+    <div class="wrap">
+      <span class="badge">📍 Gargas 31620 — proximité école & zone multisport</span>
       <h1>Deux Terrains Constructibles</h1>
-      <p class="sub">Au cœur de Gargas, à proximité de Toulouse — <strong>856 m²</strong> et <strong>911 m²</strong>, contigus. Idéal projet familial.</p>
+      <p class="sub">Au cœur de Gargas, à proximité de Toulouse — <strong>911 m²</strong> (Lot B) et <strong>856 m²</strong> (Lot C), contigus. Idéal projet familial ou investissement.</p>
       <div class="pills">
-        <span class="pill">⚡ Accès rapide D888 / A68</span>
-        <span class="pill">🌳 Environnement calme</span>
-        <span class="pill">🧭 Exposition favorable</span>
+        <span class="pill">⚡ Accès D888 / A68</span>
+        <span class="pill">🌳 Cadre calme</span>
+        <span class="pill">🧭 Bonne exposition</span>
+        <span class="pill">🏫 École & multisport à pied</span>
       </div>
       <a href="#contact" class="cta">Je souhaite être contacté</a>
     </div>
   </header>
 
-  <main class="wrap" id="contact" style="scroll-margin-top:84px;">
-    <h2 class="section-title">Contact (Bêta)</h2>
-    <p class="muted">Formulaire relié directement à Google Sheets pour validation des flux. La version finale activera le traitement RGPD et l’envoi vers votre CRM.</p>
-
-    <div class="card">
-      <!-- 👇 Intégration de ton Google Form -->
-      <iframe
-        src="https://forms.gle/8sxBBtBFzBm27PF58"
-        title="Formulaire d'intérêt – Terrains Gargas (Bêta)">
-        Chargement…
-      </iframe>
+  <main class="wrap">
+    <!-- Bandeau offre groupée -->
+    <div class="strip">
+      <div>💡</div>
+      <div>
+        <strong>Achat groupé des 2 terrains :</strong> bénéficiez de <strong>-10%</strong> sur l’ensemble.<br>
+        Parfait pour un projet familial (parents + enfants) ou deux foyers amis.
+      </div>
     </div>
 
-    <p class="foot">
-      Si le formulaire ne s’affiche pas, <a href="https://forms.gle/8sxBBtBFzBm27PF58" target="_blank" rel="noopener">ouvrez-le dans un nouvel onglet</a>.
-    </p>
+    <!-- CARTES LOTS -->
+    <div class="grid" aria-label="Lots disponibles">
+      <!-- Lot B -->
+      <article class="card" id="lot-b">
+        <div class="card-img" style="background-position:center 40%;"></div>
+        <div class="card-body">
+          <h3>Lot B — 911 m²</h3>
+          <p class="meta">Réf. Gargas&nbsp;B • borné • viabilisation à proximité</p>
+          <div class="chips">
+            <span class="chip">📐 911&nbsp;m²</span>
+            <span class="chip">💧 Réseaux en bordure</span>
+            <span class="chip">🧭 Orientation favorable</span>
+          </div>
+          <p class="price">115&nbsp;000&nbsp;€</p>
+          <div class="btnline">
+            <a class="btn primary" href="#contact">Je suis intéressé</a>
+            <a class="btn" href="#contact">Poser une question</a>
+          </div>
+        </div>
+      </article>
 
-    <hr style="border:none;border-top:1px solid rgba(0,0,0,.06);margin:28px 0 14px">
-    <p class="foot">Version bêta — non indexée. © HASA Promotion</p>
+      <!-- Lot C -->
+      <article class="card" id="lot-c">
+        <div class="card-img" style="background-position:center 60%;"></div>
+        <div class="card-body">
+          <h3>Lot C — 856 m²</h3>
+          <p class="meta">Réf. Gargas&nbsp;C • borné • viabilisation à proximité</p>
+          <div class="chips">
+            <span class="chip">📐 856&nbsp;m²</span>
+            <span class="chip">💧 Réseaux en bordure</span>
+            <span class="chip">🌳 Environnement dégagé</span>
+          </div>
+          <p class="price">110&nbsp;000&nbsp;€</p>
+          <div class="btnline">
+            <a class="btn primary" href="#contact">Je suis intéressé</a>
+            <a class="btn" href="#contact">Poser une question</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- CONTACT / FORM -->
+    <section id="contact" style="scroll-margin-top:84px;margin-top:10px">
+      <h2 class="section-title">Contact (Bêta)</h2>
+      <p class="muted">Ce formulaire est relié à Google Sheets pour la phase de test. En version publique, nous activerons le consentement RGPD et l’envoi vers CRM.</p>
+
+      <div class="card">
+        <iframe
+          src="https://forms.gle/8sxBBtBFzBm27PF58"
+          title="Formulaire d'intérêt – Terrains Gargas (Bêta)">
+          Chargement…
+        </iframe>
+      </div>
+
+      <p class="muted" style="margin-top:12px">
+        Si l’iframe ne s’affiche pas, <a href="https://forms.gle/8sxBBtBFzBm27PF58" target="_blank" rel="noopener">ouvrez le formulaire dans un nouvel onglet</a>.
+      </p>
+    </section>
+
+    <footer>
+      Version bêta — non indexée. © HASA Promotion
+    </footer>
   </main>
 </body>
 </html>
